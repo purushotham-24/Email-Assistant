@@ -51,6 +51,22 @@ The AI-Powered Communication Assistant is a comprehensive solution that intellig
 
 ### Installation
 
+#### Option 1: Demo Mode (No Setup Required)
+```bash
+# Clone and run immediately
+git clone https://github.com/yourusername/ai-email-assistant.git
+cd ai-email-assistant
+python simple_demo.py
+```
+
+#### Option 2: Web Dashboard
+```bash
+# Start the web server
+python simple_server.py
+# Open http://localhost:8080
+```
+
+#### Option 3: Full Setup with Real Gmail Integration
 1. **Clone the repository**
 ```bash
    git clone https://github.com/yourusername/ai-email-assistant.git
@@ -62,26 +78,40 @@ The AI-Powered Communication Assistant is a comprehensive solution that intellig
 pip install -r requirements.txt
 ```
 
-3. **Set up environment variables**
+3. **Set up Gmail API (Optional)**
+   ```bash
+   # Go to Google Cloud Console
+   # Enable Gmail API
+   # Create OAuth 2.0 credentials
+   # Download credentials.json
+   ```
+
+4. **Set up environment variables**
    ```bash
    cp .env.example .env
    # Edit .env with your credentials
    ```
 
-4. **Initialize the knowledge base**
+5. **Initialize the knowledge base**
    ```bash
    python init_knowledge_base.py
    ```
 
-5. **Run the application**
+6. **Run the application**
    ```bash
+   # Demo mode
+   python realtime_demo.py
+   
+   # Live Gmail integration
+   python realtime_demo.py --live
+   
+   # Full web application
    python main.py
    ```
 
-6. **Access the dashboard**
-   ```
-   http://localhost:8000
-   ```
+7. **Access the dashboard**
+   - Demo: `http://localhost:8080`
+   - Full app: `http://localhost:8000`
 
 ## 📋 Configuration
 
